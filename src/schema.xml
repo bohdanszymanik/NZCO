@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ns2:Schema xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xmlns:ns3="http://www.i2group.com/Schemas/2011-03-03/ModelSchemaExtension" DefaultLabelingSchemeId="8355f4c5-1444-4a2f-b4da-f9374fbd80e6" xmlns:ns2="http://www.i2group.com/Schemas/2011-03-03/ModelSchema">
+  <GradeTypes />
+  <ItemTypes>
+    <EntityTypes>
+      <EntityType Description="An Analyst's Notebook chart" DisplayName="Analyst's Notebook Chart" Id="CHART" Icon="Anbchart">
+        <PropertyGroupTypes />
+        <PropertyTypes>
+          <PropertyType Description="The name of the chart, which is independent from its file name" DisplayName="Name" Id="CHART1" LogicalType="SINGLE_LINE_STRING" Mandatory="true" Position="0" SemanticTypeId="" MaximumLengthChars="255">
+            <PossibleValues />
+          </PropertyType>
+          <PropertyType Description="A description of the chart" DisplayName="Description" Id="CHART2" LogicalType="MULTIPLE_LINE_STRING" Mandatory="false" Position="1" SemanticTypeId="">
+            <PossibleValues />
+          </PropertyType>
+        </PropertyTypes>
+      </EntityType>
+      <EntityType Description="A company in the NZ Companies Office" DisplayName="Company" Id="ET1" SemanticTypeId="guidDB8328BF-3AC1-42A9-B09D-51F4FC93DC42" Icon="Office">
+        <PropertyGroupTypes />
+        <PropertyTypes>
+          <PropertyType Description="" DisplayName="NZBN" Id="PT1" LogicalType="SINGLE_LINE_STRING" Mandatory="true" Position="0" SemanticTypeId="" MaximumLengthChars="15">
+            <PossibleValues />
+          </PropertyType>
+          <PropertyType Description="" DisplayName="Name" Id="PT2" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="1" SemanticTypeId="guidB2A3B23C-07B8-4A87-8B45-4CD20079E79C" MaximumLengthChars="250">
+            <PossibleValues />
+          </PropertyType>
+          <PropertyType Description="" DisplayName="Number" Id="PT3" LogicalType="INTEGER" Mandatory="false" Position="2" SemanticTypeId="">
+            <PossibleValues />
+          </PropertyType>
+          <PropertyType Description="" DisplayName="Incorporated" Id="PT5" LogicalType="DATE" Mandatory="false" Position="3" SemanticTypeId="">
+            <PossibleValues />
+          </PropertyType>
+          <PropertyType Description="Entity type: NZ Co-operative Company, NZ Limited Company, NZ Unlimited Company, Overseas ASIC Company, Overseas Non-ASIC Company" DisplayName="Type" Id="PT6" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="4" SemanticTypeId="" MaximumLengthChars="250">
+            <PossibleValues />
+          </PropertyType>
+        </PropertyTypes>
+      </EntityType>
+      <EntityType DisplayName="Person" Id="ET3" SemanticTypeId="guid8A586959-9837-47DE-8DBF-BC7031F01545" Icon="Online Identitiy">
+        <PropertyGroupTypes />
+        <PropertyTypes>
+          <PropertyType Description="" DisplayName="name" Id="PT4" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="0" SemanticTypeId="guidB696CF9C-BF3C-4311-954F-DD809CEB38CC" MaximumLengthChars="250">
+            <PossibleValues />
+          </PropertyType>
+          <PropertyType Description="" DisplayName="firstName" Id="PT7" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="1" SemanticTypeId="" MaximumLengthChars="250">
+            <PossibleValues />
+          </PropertyType>
+          <PropertyType Description="" DisplayName="roleType" Id="PT8" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="2" SemanticTypeId="" MaximumLengthChars="250">
+            <PossibleValues />
+          </PropertyType>
+          <PropertyType Description="" DisplayName="status" Id="PT9" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="3" SemanticTypeId="" MaximumLengthChars="250">
+            <PossibleValues />
+          </PropertyType>
+          <PropertyType Description="" DisplayName="physicalAddress" Id="PT10" LogicalType="SINGLE_LINE_STRING" Mandatory="false" Position="4" SemanticTypeId="" MaximumLengthChars="250">
+            <PossibleValues />
+          </PropertyType>
+        </PropertyTypes>
+      </EntityType>
+    </EntityTypes>
+    <LinkTypes>
+      <LinkType DisplayName="DirectorCompany" Id="LT1" FromTypeIds="ET1" ToTypeIds="ET3 ET1">
+        <PropertyGroupTypes />
+        <PropertyTypes />
+      </LinkType>
+    </LinkTypes>
+  </ItemTypes>
+  <Id>b5f2afce-bb7b-4d2c-b1b1-e6e0b9ecea82</Id>
+  <Version>30</Version>
+  <SourceInfoMandatoryFields IsDateMandatory="false" IsDescriptionMandatory="false" IsReferenceMandatory="false" IsTypeMandatory="false" />
+  <LinkStrengthInfo DefaultLinkStrengthId="f232caa8-cf55-4d9a-8c21-19a55b0447da">
+    <LinkStrengths>
+      <LinkStrength Id="f232caa8-cf55-4d9a-8c21-19a55b0447da" Name="Confirmed" LineStyle="SOLID" />
+      <LinkStrength Id="59f66ee2-0abe-4036-a11d-07ed4175720e" Name="Unconfirmed" LineStyle="DASHED" />
+      <LinkStrength Id="f0d2ff1c-28cb-4afe-8cbb-89e198c910a3" Name="Tentative" LineStyle="DOTTED" />
+    </LinkStrengths>
+  </LinkStrengthInfo>
+  <LabelingSchemes>
+    <LabelingScheme Id="8355f4c5-1444-4a2f-b4da-f9374fbd80e6" Name="DB Connector Labeling Scheme">
+      <LabelDefinitions>
+        <LabelDefinition ItemTypeId="CHART">
+          <LabelParts />
+        </LabelDefinition>
+        <LabelDefinition ItemTypeId="ET1">
+          <LabelParts />
+        </LabelDefinition>
+        <LabelDefinition ItemTypeId="ET3">
+          <LabelParts />
+        </LabelDefinition>
+        <LabelDefinition ItemTypeId="LT1">
+          <LabelParts />
+        </LabelDefinition>
+      </LabelDefinitions>
+    </LabelingScheme>
+  </LabelingSchemes>
+  <SemanticTypeLibrary>
+    <lcx:LibraryCatalogue VersionMajor="1" VersionMinor="18" VersionRelease="27" VersionBuild="60" xmlns:lcx="http://www.i2group.com/Schemas/2001-12-07/LCXSchema" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" LocaleHex="0409" />
+  </SemanticTypeLibrary>
+</ns2:Schema>

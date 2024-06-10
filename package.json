@@ -1,0 +1,32 @@
+{
+  "name": "nzco",
+  "version": "0.1.0",
+  "private": true,
+  "devDependencies": {
+    "@i2analyze/i2connect-scripts": "^2.1.1",
+    "@types/node": "^18.19.34",
+    "typescript": "^5.4.5"
+  },
+  "scripts": {
+    "build": "i2connect-scripts build",
+    "serve": "node dist/index.js",
+    "start": "i2connect-scripts start",
+    "i2connect": "i2connect-scripts"
+  },
+  "engines": {
+    "node": ">=18.17.0"
+  },
+  "volta": {
+    "node": "18.17.0"
+  },
+  "dependencies": {
+    "@i2analyze/i2connect": "^2.3.3",
+    "jsonwebtoken": "^9.0.2",
+    "node-fetch": "^3.3.2",
+    "papaparse": "^5.4.1",
+    "prob.js": "^1.0.6",
+    "rotating-file-stream": "^3.2.1",
+    "tslog": "^4.9.2",
+    "uuid": "^9.0.1"
+  }
+}

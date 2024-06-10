@@ -1,0 +1,6 @@
+{
+  "companiesEntityRoleSearch": "https://api.business.govt.nz/gateway/companies-office/companies-register/entity-roles/v3/search?",
+  "companiesEntityRoleSearchToken": "${env.ENV_CERS_TOKEN}",
+  "nzbnUrl": "https://api.business.govt.nz/gateway/nzbn/v5/entities?",
+  "nzbnToken": "${env.ENV_NZBN_TOKEN}"
+}

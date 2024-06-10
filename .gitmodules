@@ -1,0 +1,3 @@
+[submodule "src/va-i2c-helperfunctions"]
+	path = src/va-i2c-helperfunctions
+	url = https://github.com/VA-Worldwide/va-i2c-helperfunctions.git
