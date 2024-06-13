@@ -15,6 +15,8 @@ import {
 
 import {logger} from "./globals";
 
+import {addCompanyService} from "./company";
+
 // logger.info("I am a log from index.ts");
 // logger.warn("I am a warn log from index.js with a json object:", {foo: "bar"});
 
@@ -28,7 +30,8 @@ const i2Logger = createLogger('i2Logger')
 // import * as jwt from 'jsonwebtoken';
 import {
   Company,
-  Person
+  Person,
+  requestNZBN
 } from './data-access';
 
 
@@ -93,6 +96,8 @@ function addCompanyToResult(
 
   const {NAME} = company
 
+  console.log(requestNZBN({'search-term': 'bs%consult'}))
+
   const resultEntity = result.addEntity(Company, 'abcdef')
 
   resultEntity.setProperties({
@@ -156,45 +161,8 @@ function addPersonToResult(
 
 
 
+addCompanyService()
 
-addService(
-  {
-    id: 'companySearch',
-    name: 'Company',
-    description: `Search companies in the Companies Register by searching on name text`,
-    hasPersistentResultIds: true,
-    resultItemTypes: [Company],
-    form: {
-      nameCriteria: {
-        label: 'Name contains',
-        isMandatory: false,
-        logicalType: 'singleLineString',
-        defaultValue: '',
-        formIsMandatory: true,
-      }
-    },
-  },
-  ({conditions: {nameCriteria}, result}) => {
-
-    if (nameCriteria !== undefined) {
-      logger.info(`company search, criteria:${nameCriteria}, user:${userInfo().username}, ${(new Date()).toISOString()}`)
-
-      const c1 = result.addEntity(Company, 'some company id')
-      c1.setProperty("Name", "some name")
-      c1.setProperty("NZBN", "abcdef123")
-
-      // const data = getCompaniesByNameFragment(nameCriteria)
-
-      // data.forEach(function (item: Company) {
-      //   item.id = item.NZBN
-      //   addCompanyToResult(item, result)
-      // })
-
-    } else {
-      // what now!
-    }
-  }
-)
 
 
 addService(
